@@ -507,3 +507,13 @@ Final results are ran through external visualization tool called Tableau to revi
 ![High Margin Growth Options Fund Stocks](imgs/Cluster7wc.png)
 
 
+### Using Pseudo t^2 to Get an Automatic Pick
+
+
+```{r}
+library(NbClust)
+NbClust(data=interests, min.nc=2, max.nc=9, method="complete", index="pseudot2")
+```
+
+
+**Based on above automatic pick analysis it appears cluster run of 3 to be good fit, howerver the original goal to exclude high market cap companies from the selected basket or grouping did not achived therefor this cluster 3 pick may need even further analysis and also may need more data points to get better overall results.**
